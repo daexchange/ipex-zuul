@@ -26,7 +26,7 @@ public class IpexZuul {
 	}
 	
 	
-	@Bean(name = "LogFilter")
+	@Bean(name = "CrossDomainFilter")
 	public CrossDomainFilter getCrossDomainFilter(){
 		return new CrossDomainFilter();
 	}

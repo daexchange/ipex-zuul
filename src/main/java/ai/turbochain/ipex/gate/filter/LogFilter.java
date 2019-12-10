@@ -51,7 +51,8 @@ public class LogFilter implements Filter {
 		} catch (Exception e) {
 			long endTime = System.currentTimeMillis();
 			// 消耗的总时间
-			logger.info(request.getRemoteAddr() + " 访问了 " + requestURI + " 出错,  总用时 " + (endTime - startTime) + " 毫秒。");
+			logger.error(request.getRemoteAddr() + " 访问了 " + requestURI + " 出错,  总用时 " + (endTime - startTime) + " 毫秒。");
+			logger.error(e.getMessage());
 		}
 		
 		
